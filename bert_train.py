@@ -1,5 +1,6 @@
 import torch
 import torch.utils.data as Data
+import argparse
 from transformers import BertModel
 from datasets import load_from_disk
 from transformers import BertTokenizer,get_linear_schedule_with_warmup
@@ -8,6 +9,7 @@ from torch.optim import AdamW
 from common import *
 import os
 os.environ['NO_PROXY'] = 'huggingface.co'
+
 
 def get_train_args():
     parser=argparse.ArgumentParser()
